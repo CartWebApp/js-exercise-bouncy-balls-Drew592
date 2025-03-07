@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Bouncing Ball</title>
     <meta charset="utf-8">
     <title>[Your Name Here]'s Bouncing balls</title>
     <link rel="stylesheet" href="style.css">
   </head>
 
+  <!DOCTYPE html>
+<html>
+<head>
+<title>Add Balls on Click</title>
+<style>
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+</style>
+</head>
+<body>
+<script>
+  document.addEventListener('click', function(event) {
+    const ball = document.createElement('div');
+    ball.classList.add('ball');
+    ball.style.left = event.clientX - 10 + 'px';
+    ball.style.top = event.clientY - 10 + 'px';
+    document.body.appendChild(ball);
+  });
+</script>
+</body>
+</html>
+
   <body>
     <h1>bouncing balls</h1>
     <canvas></canvas>
 
+
     <script src="main.js"></script>
+
+
+    
   </body>
 </html>
